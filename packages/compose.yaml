@@ -1,0 +1,14 @@
+services:
+  python:
+    restart: unless-stopped
+    image: ghcr.io/coldfirel15/mail-config-template:${DOCKER_TAG:-main}
+    container_name: mail-config-template
+    hostname: mail-config-template
+    environment:
+      TZ: Europe/Paris
+      SECRET_KEY: ${SECRET_KEY}
+      DEBUG: ${DEBUG}
+    ports:
+      - 5000:5000
+
+ 

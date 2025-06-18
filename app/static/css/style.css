@@ -1,0 +1,47 @@
+:root {
+    --bg-primary: #1A1D23;
+    --bg-secondary: #e0e0e0;
+    --accent: #007bff;
+    --text-dark: #333;
+    --text-light: #f8f9fa;
+    --success: #28a745;
+    --warning: #ffc107;
+    --error: #dc3545;
+    --informations: #17a2b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 140, 0, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.services-section {
+    background-color: #1A1D23;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+}
+

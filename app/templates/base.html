@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon projet Flask{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/fav.png')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-montserrat min-h-screen text-white overflow-x-hidden">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-sm">
+        <nav class="mx-auto px-6 py-4 flex justify-center items-center">
+            <div class="flex items-center">
+                <span class="text-xl font-bold">
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='img/logo1.png') }}" alt="Volcano Solutions" class="w-72">
+                    </a>
+                </span>
+            </div>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+    
+    <!-- Footer -->
+    <footer class="mt-16 py-8 border-t border-gray-700/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-gray-400 text-sm text-center">
+                © 2025 Volcano Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
